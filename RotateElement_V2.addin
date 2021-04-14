@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command RotateElement_V2</Text>
+    <Description>Some description for RotateElement_V2</Description>
+    <Assembly>RotateElement_V2.dll</Assembly>
+    <FullClassName>RotateElement_V2.Command</FullClassName>
+    <ClientId>30825244-1c65-457d-ae1a-960a25b6e335</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application RotateElement_V2</Name>
+    <Assembly>RotateElement_V2.dll</Assembly>
+    <FullClassName>RotateElement_V2.App</FullClassName>
+    <ClientId>9daf9351-985f-4603-9e0b-6b24dfe91a02</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
