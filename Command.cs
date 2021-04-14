@@ -20,34 +20,12 @@ namespace RotateElement_V2
           ref string message,
           ElementSet elements)
         {
-            UIApplication uiapp = commandData.Application;
-            UIDocument uidoc = uiapp.ActiveUIDocument;
-            Autodesk.Revit.ApplicationServices.Application app = uiapp.Application;
-            Document doc = uidoc.Document;
-
-            ICollection<ElementId> elementIds = uidoc.Selection.GetElementIds();
-            Reference reference = uidoc.Selection.PickObject(ObjectType.Element);
-            Line axis = (doc.GetElement(reference).Location as LocationCurve).Curve as Line;
-
-            command_class setting = new command_class();
-
-            Window_Form window_Form = new Window_Form(setting);
-            DialogResult dialogResult = window_Form.ShowDialog();
-            double AngleConvert = setting.Angle * Math.PI / 180;
-
-            MessageBox.Show(AngleConvert.ToString());
-
-            using(Transaction t = new Transaction(doc,"Rorate Element"))
-            {
-                t.Start();
-                ElementTransformUtils.RotateElements(doc, elementIds, axis, AngleConvert);
-                t.Commit();
-            }
+            UIDocument uidoc = commandData.Application.ActiveUIDocument;
+            Window_Form frm = new Window_Form(uidoc);
+            frm.TopMost = true;
+            frm.Show();
             return Result.Succeeded;
         }
-    }
-    public class command_class
-    {
-        public double Angle { set; get; }
+
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.TextBox_Angle = new System.Windows.Forms.TextBox();
+            this.Angle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.but_left = new System.Windows.Forms.Button();
             this.but_right = new System.Windows.Forms.Button();
@@ -46,15 +46,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Angle";
             // 
-            // TextBox_Angle
+            // Angle
             // 
-            this.TextBox_Angle.Location = new System.Drawing.Point(77, 22);
-            this.TextBox_Angle.Name = "TextBox_Angle";
-            this.TextBox_Angle.Size = new System.Drawing.Size(50, 20);
-            this.TextBox_Angle.TabIndex = 1;
-            this.TextBox_Angle.Text = "90";
-            this.TextBox_Angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBox_Angle.TextChanged += new System.EventHandler(this.TextBox_Angle_TextChanged);
+            this.Angle.Location = new System.Drawing.Point(77, 22);
+            this.Angle.Name = "Angle";
+            this.Angle.Size = new System.Drawing.Size(50, 20);
+            this.Angle.TabIndex = 1;
+            this.Angle.Text = "45";
+            this.Angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Angle.TextChanged += new System.EventHandler(this.TextBox_Angle_TextChanged);
             // 
             // label2
             // 
@@ -92,7 +92,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 22);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Apply";
+            this.button3.Text = "Close";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -105,7 +105,7 @@
             this.Controls.Add(this.but_right);
             this.Controls.Add(this.but_left);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TextBox_Angle);
+            this.Controls.Add(this.Angle);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(230, 160);
             this.MinimumSize = new System.Drawing.Size(230, 160);
@@ -119,7 +119,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TextBox_Angle;
+        private System.Windows.Forms.TextBox Angle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button but_left;
         private System.Windows.Forms.Button but_right;

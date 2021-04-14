@@ -1,0 +1,7 @@
+*.dll
+*.lock
+*.ide-shm
+*.suo
+*.cache
+*.pdb
+*.storage.ide
